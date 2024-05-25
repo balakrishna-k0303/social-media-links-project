@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("./assets/fonts/static/Inter-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inter-semibold";
+  src: url("./assets/fonts/static/Inter-SemiBold.ttf");
+}
+
+:root {
+  --clr-primary-green: hsl(75, 94%, 57%);
+  --clr-neutral-gray: hsl(0, 0%, 20%);
+  --clr-neutral-dark-gray: hsl(0, 0%, 12%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-black: hsl(0, 0%, 8%);
+
+  --fs-regular: 14px;
+
+  --ff-inter-regular: "Inter", sans-serif;
+  --ff-inter-semibold: "Inter-semibold", sans-serif;
+  --ff-inter-bold: "Inter-Bold", sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --mobile: 375px;
+  --tablet: 768px;
+  --desktop: 1440px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Global styles */
+body {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-neutral-black);
+}
+
+.wrapper {
+  width: 400px;
+  /* min-height: 600px; */
+  margin: 1rem auto;
+  padding: 20px;
+  background-color: var(--clr-neutral-dark-gray);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 2rem;
+}
+
+/* Header */
+.image {
+  width: 100px;
+  height: 100px;
+  /* aspect-ratio: 1/1; */
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.name {
+  color: var(--clr-neutral-white);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-inter-regular);
+  /* font-size: 1.5rem; */
+}
+
+.location {
+  color: var(--clr-primary-green);
+  font-family: var(--ff-inter-regular);
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-semi-bold);
+}
+
+p {
+  color: var(--clr-neutral-white);
+  font-family: var(--ff-inter-regular);
+  /* font-size: var(--fs-regular); */
+  font-weight: 300;
+}
+
+.social-links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.social-links a {
+  margin: 0.5rem 0;
+  color: var(--clr-neutral-white);
+  font-family: var(--ff-inter-regular);
+  background-color: var(--clr-neutral-gray);
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.social-links a:hover {
+  background-color: var(--clr-primary-green);
+  color: var(--clr-neutral-black);
+}
+
+@media all and (max-width: 375px) {
+  .wrapper {
+    width: 400px;
+  }
+}
